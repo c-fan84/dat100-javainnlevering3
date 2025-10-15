@@ -14,13 +14,13 @@ Besvarelsen leveres inn ved å pushe java-koden med oppgavene opp på den github
 
 **Husk** at om dere har gjort oppgaven i gruppe skal dere levere som gruppe i Canvas. Se oppskrift for hvordan dette gjøres på Canvas.
 
-## Maven prosjekt med startkode (Use this Template + Clone + Import)
+## Oppgave 0: Importere prosjekt med startkode 
 
 Gå inn på github på oppbevaringsplassen som inneholder start-koden:
 
 https://github.com/dat100hib/dat100-javainnlevering3/
 
-Begynn med å opprette en kopi av denne oppbevaringsplassen ved å bruke *Use this template* (se øverste høyre hjørne på github-websiden). Du vil da få en kopi av oppbevaringsplassen med startkoden på din egen github konto. Du kan nå clone denne kopien ned på egen PC (bruk GitHub desktop). 
+Begynn med å opprette en kopi av denne oppbevaringsplassen ved å bruke *Use this template* (se øverste høyre hjørne på github-websiden). Du vil da få en kopi av oppbevaringsplassen med startkoden på din egen github konto. Du kan nå clone denne kopien ned på egen PC (bruk eks. GitHub Desktop). 
 
 Det er kun *en person* i gruppen som skal utføre *Use as template* på startkoden. Den som har utført *Use as template* kan etterfølgende gi tilgang til sin lokale kopi av oppbevaringsplassen til de andre gruppe-medlemmer ved å bruke *Settings* og *Manage Access* på GitHub. De andre gruppemedlemmer kan etterfølgende klone oppbevaringsplassen ved å bruke Github Desktop. På denne måten vil alle gruppe-medlemmer jobbe på samme oppbevaringsplass og dele koden som implementeres.
 
@@ -28,21 +28,19 @@ Det er kun *en person* i gruppen som skal utføre *Use as template* på startkod
 
 Du må nå laste ned (klone) oppbevaringsplassen med kode som blev opprettet ovenfor. Det er **viktig** at du **ikke** kloner https://github.com/dat100hib/dat100-javainnlevering3/ men den oppbevaringsplassen som du opprettet på din egen konto da du utførte "Use this template".
 
-1. Velg *Code* på github-siden
+1. Velg *Code* på Github-siden
 
 2. Velg lenken og last ned en kopi (clone) oppbevaringsplassen på samme måten som du har gjort i Github Desktop i tidligere oppgaver for å importere.
 
 Start-koden ligger i er organisert slik at bygge-systemet Maven automatisk kan brukes til å kompilere koden og kjøre test i GitHub-skyen. 
 
-Dere skal derfor bruke *Import -> Maven -> Existing Maven Projects* for å importere koden inn i Eclipse - og altså ikke importere som vanlig Eclipse-prosjekt.
+Start med å imoportere Maven prosjektet inn i IntelliJ.
 
-Du skal nå ha et prosjekt i Eclipse med navnet `dat100-javainnlevering3`
+Startkoden har en pakke for hver oppgave. Klassene inneholder starten på metodene dere skal implementere i oppgavene. Disse finnes under `src/main/java` i prosjektet.
 
-Startkoden har en pakke for hver oppgave. Klassene inneholder starten på metodene dere skal implementere i oppgavene. Disse finnes under `src/main/java` i Maven-Eclipse-prosjektet.
+Prosjektet inneholder også JUnit-enhettester som kan brukes til å teste implementasjon av metodene etterhvert som de implementeres. Disse finner du under `src/test/java` i prosjektet.
 
-Prosjektet inneholder også JUnit-enhettester som kan brukes til å teste implementasjon av metodene etterhvert som de implementeres. Disse finner du under `src/test/java` prosjektet.
-
-Testene kan kjøres ved å høyre-klikke på filen som inneholder tester og velge `Run As -> JUnit Test`.
+Testene kan kjøres på samme måte som i tidligere obligatoriske innleveringer.
 
 ### Pushe code til Github 
 
@@ -54,13 +52,13 @@ Når koden legges opp på GitHub ved å utføre en *push* vil GitHub sky-tjenest
 
 ### GitHub co-pilot (frivillig)
 
-De som ønsker å teste og eksperimentere med bruken av github co-pilot: https://github.com/features/copilot som introdusert på forelesning kan gjøre det. 
+De som ønsker å teste og eksperimentere med bruken av kode co-piloter kan gjøre dette i prosjektet.
 
-I Eclipse må en installere: https://marketplace.eclipse.org/content/copilot4eclipse kan gjøre dette i prosjektet. 
+Dette kan eks. være AI assistant i IntelliJ: https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant
 
-Der finnes tilsvarende plug-ins også for VSCode og IntelliJ for de som bruker det.
+eller Github co-pilot: https://github.com/features/copilot
 
-I etterkant av innleveringen kommer vi til å gjøre den liten undersøkelse omkring bruk og erfaringer med GitHub co-pilot.
+I etterkant av innleveringen kommer vi til å gjøre den liten undersøkelse omkring bruk og erfaringer med co-pilot.
 
 ## Oppgave 1 - Abstrakt klasse
 
