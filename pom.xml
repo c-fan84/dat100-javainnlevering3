@@ -3,40 +3,19 @@
   <groupId>no.hvl.dat100</groupId>
   <artifactId>dat100-javainnlevering3</artifactId>
   <version>1.0-SNAPSHOT</version>
-  
-      <properties>
+
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.release>24</maven.compiler.release>
     </properties>
 
     <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.11.0</version>
+            <version>5.13.4</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.5.0</version>
-            <type>maven-plugin</type>
-        </dependency>
     </dependencies>
-
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.5.0</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
 </project>

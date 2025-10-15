@@ -14,8 +14,7 @@ Besvarelsen leveres inn ved å pushe java-koden med oppgavene opp på den github
 
 **Husk** at om dere har gjort oppgaven i gruppe skal dere levere som gruppe i Canvas. Se oppskrift for hvordan dette gjøres på Canvas.
 
-## Oppgave 0: Importere prosjekt med startkode 
-
+## Oppgave 0: Importere prosjekt med startkode
 Gå inn på github på oppbevaringsplassen som inneholder start-koden:
 
 https://github.com/dat100hib/dat100-javainnlevering3/
@@ -34,13 +33,13 @@ Du må nå laste ned (klone) oppbevaringsplassen med kode som blev opprettet ove
 
 Start-koden ligger i er organisert slik at bygge-systemet Maven automatisk kan brukes til å kompilere koden og kjøre test i GitHub-skyen. 
 
-Start med å imoportere Maven prosjektet inn i IntelliJ.
+Start med å importere Maven prosjektet inn i IntelliJ.
 
 Startkoden har en pakke for hver oppgave. Klassene inneholder starten på metodene dere skal implementere i oppgavene. Disse finnes under `src/main/java` i prosjektet.
 
 Prosjektet inneholder også JUnit-enhettester som kan brukes til å teste implementasjon av metodene etterhvert som de implementeres. Disse finner du under `src/test/java` i prosjektet.
 
-Testene kan kjøres på samme måte som i tidligere obligatoriske innleveringer.
+Testene kan kjøres på samme måte som i tidligere obligatoriske innleveringer. Om du / dere velger ikke å gjøre noen av de valgfrie oppgaver, så anbefales det å slette den tilsvarende test-klasse slik Github actions ikke kjører tester for metoder som dere har valgt ikke å implementere.
 
 ### Pushe code til Github 
 
