@@ -21,7 +21,7 @@ public class BloggApp {
 				"Lars, hva er status for den siste obligatoriske innleveringen?");
 		Bilde innlegg2 = new Bilde(2, "Lars", "24-10",
 				"Ser bra ut! - har lagt ved output-eksempel fra enhetstester",
-				"https://home.hvl.no/ansatte/lmkr/dat100/junitscreenshot.png");
+				"https://lmkr.github.io/junitrun.png");
 
 		innlegg1.doLike();
 		innlegg1.doLike();
