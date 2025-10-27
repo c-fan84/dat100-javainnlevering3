@@ -15,14 +15,17 @@ public class Blogg {
 
 	public Blogg(int lengde) {
 		innleggtabell = new Innlegg[lengde];
+        nesteledig = 0;
 	}
 
 	public int getAntall() {
         int antall = 0;
-        for ( Innlegg innlegg : innleggtabell )
-            if (innlegg != null) {
+        for (int i = 0; i < innleggtabell.length; i++) {
+            if ( innleggtabell[i] != null ) {
                 antall++;
             }
+        }
+        nesteledig = antall;
         return antall;
 	}
 	
@@ -34,7 +37,7 @@ public class Blogg {
 	public int finnInnlegg(Innlegg innlegg) {
 
         for (int i = 0; i < innleggtabell.length; i++) {
-            if (innleggtabell[i].erLik(innlegg)) {
+            if (innleggtabell[i] != null && innleggtabell[i].erLik(innlegg)) {
                 return i;
             }
         }
@@ -42,26 +45,17 @@ public class Blogg {
 	}
 
 	public boolean finnes(Innlegg innlegg) {
-		if (finnInnlegg(innlegg) != -1) {
-            return true;
-        }
-        return false;
-        // return finnInnlegg(innlegg) != -1;
+		return finnInnlegg(innlegg) != -1;
 	}
 
-	public boolean ledigPlass() {
-        for ( int i = 1; i < innleggtabell.length; i++ ) {
-            if (innleggtabell[i] == null) {
-                return true;
-            }
-        }
-        return false;
-	}
+    public boolean ledigPlass() {
+        return this.getAntall() < innleggtabell.length;
+    }
 	
 	public boolean leggTil(Innlegg innlegg) {
 
 		if ( finnes(innlegg) && ledigPlass() )  {
-            innleggtabell[nesteledig] = innlegg;
+            innleggtabell[getAntall()] = innlegg ;
             return true;
         }
         return false;
