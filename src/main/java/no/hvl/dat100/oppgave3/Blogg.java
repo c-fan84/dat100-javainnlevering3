@@ -14,35 +14,57 @@ public class Blogg {
 	}
 
 	public Blogg(int lengde) {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
+		innleggtabell = new Innlegg[lengde];
 	}
 
 	public int getAntall() {
-		throw new UnsupportedOperationException(TODO.method());
+        int antall = 0;
+        for ( Innlegg innlegg : innleggtabell )
+            if (innlegg != null) {
+                antall++;
+            }
+        return antall;
 	}
 	
 	public Innlegg[] getSamling() {
-		throw new UnsupportedOperationException(TODO.method());
+		return innleggtabell;
 
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
 
-		throw new UnsupportedOperationException(TODO.method());
+        for (int i = 0; i < innleggtabell.length; i++) {
+            if (innleggtabell[i].erLik(innlegg)) {
+                return i;
+            }
+        }
+        return -1;
 	}
 
 	public boolean finnes(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
+		if (finnInnlegg(innlegg) != -1) {
+            return true;
+        }
+        return false;
+        // return finnInnlegg(innlegg) != -1;
 	}
 
 	public boolean ledigPlass() {
-		throw new UnsupportedOperationException(TODO.method());
-
+        for ( int i = 1; i < innleggtabell.length; i++ ) {
+            if (innleggtabell[i] == null) {
+                return true;
+            }
+        }
+        return false;
 	}
 	
 	public boolean leggTil(Innlegg innlegg) {
 
-		throw new UnsupportedOperationException(TODO.method());
+		if ( finnes(innlegg) && ledigPlass() )  {
+            innleggtabell[nesteledig] = innlegg;
+            return true;
+        }
+        return false;
 	}
 	
 	public String toString() {
